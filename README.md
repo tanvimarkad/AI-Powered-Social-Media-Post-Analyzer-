@@ -1,66 +1,100 @@
-🧠 AI-Powered Social Media Post Analyzer (Gemini)
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AI-Powered Social Media Post Analyzer (Gemini) - README</title>
+  <style>
+    body { font-family: "Segoe UI", Roboto, Arial, sans-serif; line-height:1.6; margin:40px; color:#222; }
+    h1,h2,h3 { color:#0a66c2; }
+    pre { background:#f4f4f4; padding:10px; border-radius:6px; overflow:auto; }
+    code { font-family: Consolas, monospace; background:#eee; padding:2px 4px; border-radius:4px; }
+    ul { margin-left:20px; }
+    section { margin-bottom:24px; }
+    hr { border:none; border-top:1px solid #ddd; margin:24px 0; }
+    footer { margin-top:40px; font-size:0.9em; color:#666; }
+  </style>
+</head>
+<body>
+  <h1>🧠 AI-Powered Social Media Post Analyzer (Gemini)</h1>
+  <p>A lightweight <strong>Flask web app</strong> using <strong>Google Gemini Generative AI</strong> to analyze social media posts and return structured JSON insights including sentiment, mood, and personality tone.</p>
 
-A simple Flask web app that uses Google’s Gemini Generative AI to analyze social media posts. It returns a structured JSON with insights like sentiment, mood, and personality tone.
+  <hr>
 
-🚀 Features
+  <section>
+    <h2>🚀 Features</h2>
+    <ul>
+      <li>✨ <strong>Sentiment Analysis</strong> — Positive / Negative / Neutral</li>
+      <li>😊 <strong>Mood Detection</strong> — e.g., Happy, Frustrated</li>
+      <li>🧠 <strong>Personality Insights</strong> — detects tone or writer's attitude</li>
+      <li>🌐 Simple Flask backend + REST API endpoint</li>
+      <li>🔒 Local-only API key handling via <code>apikey.txt</code> or environment variable</li>
+    </ul>
+  </section>
 
-✨ Sentiment classification: Positive / Negative / Neutral
+  <section>
+    <h2>⚙️ Setup &amp; Run</h2>
+    <h3>1️⃣ Install dependencies</h3>
+    <pre><code>pip install -r requirements.txt</code></pre>
 
-😊 Mood detection: short mood tag (e.g., Happy, Frustrated)
+    <h3>2️⃣ Add your Gemini API key</h3>
+    <p>Create a file named <code>apikey.txt</code> in the project root and paste your Gemini API key inside.<br>
+    Alternatively, set an environment variable:</p>
+    <pre><code># macOS / Linux
+export GEMINI_API_KEY='your_api_key_here'
 
-🧠 Personality insight: tone or intent of the writer
+# Windows
+setx GEMINI_API_KEY "your_api_key_here"</code></pre>
 
-🌐 Simple Flask backend + easy-to-use REST API
+    <h3>3️⃣ Run the app</h3>
+    <pre><code>python app.py</code></pre>
+    <p>Then open: <a href="http://127.0.0.1:5000" target="_blank">http://127.0.0.1:5000</a></p>
+  </section>
 
-🔒 Secure local API key handling (apikey.txt or environment variable)
-
-⚙️ Setup & Run
-1️⃣ Install dependencies
-pip install -r requirements.txt
-
-2️⃣ Add your Gemini API key
-
-Create a file named apikey.txt in the project folder and paste your Gemini API key inside.
-(Never share or commit this file.)
-
-Alternatively, set the environment variable:
-
-export GEMINI_API_KEY='your_api_key_here'  # macOS/Linux
-setx GEMINI_API_KEY "your_api_key_here"    # Windows
-
-3️⃣ Run the app
-python app.py
-
-
-Then open: http://127.0.0.1:5000/
-
-📁 Project Structure
-AI-Powered Social Media Post Analyzer/
+  <section>
+    <h2>📁 Project Structure</h2>
+    <pre><code>AI-Powered Social Media Post Analyzer/
 │
-├── app.py                # Flask app using google-generativeai
-├── check_models.py       # Lists available Gemini models
-├── test_gemini.py        # Simple Gemini API connectivity test
-├── apikey.txt.template   # Template for local key storage
+├── app.py                # Flask backend using google-generativeai
+├── check_models.py       # Lists Gemini models
+├── test_gemini.py        # Connectivity test
+├── apikey.txt.template   # Example key file
 ├── requirements.txt      # Dependencies
-├── sample_posts.txt      # Example test posts
-└── templates/ and static/ (frontend files)
+├── sample_posts.txt      # Example posts
+└── templates/ & static/  # Frontend files
+</code></pre>
+  </section>
 
-🧩 Example Output
-{
+  <section>
+    <h2>🧩 Example Output</h2>
+    <pre><code>{
   "sentiment": "Positive",
   "mood": "Excited",
   "personality_insight": "Optimistic, confident tone"
-}
+}</code></pre>
+  </section>
 
-🛠️ Technologies
+  <section>
+    <h2>🛠️ Technologies</h2>
+    <ul>
+      <li><strong>Backend:</strong> Flask, Flask-CORS</li>
+      <li><strong>AI Model:</strong> Google Gemini (Generative AI API)</li>
+      <li><strong>Language:</strong> Python 3.10+</li>
+    </ul>
+  </section>
 
-Backend: Flask, Flask-CORS
+  <section>
+    <h2>⚠️ Security Notice</h2>
+    <p>Never upload <code>apikey.txt</code> or share real API keys publicly. Revoke any accidentally exposed keys immediately in your Google AI console.</p>
+  </section>
 
-AI Model: Google Gemini (Generative AI API)
+  <section>
+    <h2>📜 License</h2>
+    <p>MIT License © 2025 Your Name</p>
+  </section>
 
-Language: Python 3.10+
-
-⚠️ Security Notice
-
-Never upload your apikey.txt or include real API keys in commits or public repositories.
-Revoke any accidentally exposed keys immediately from your Google AI console.
+  <footer>
+    <p>Created with ❤️ using Flask + Gemini AI.</p>
+  </footer>
+</body>
+</html>
