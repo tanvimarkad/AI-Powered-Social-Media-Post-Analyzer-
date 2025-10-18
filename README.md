@@ -1,67 +1,66 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>AI-Powered Social Media Post Analyzer — README</title>
-  <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial; line-height:1.6; margin:40px; color:#111; }
-    header { margin-bottom: 20px; }
-    h1 { font-size: 1.8rem; margin:0; }
-    p.lead { color:#444; margin-top:6px; }
-    section { margin: 18px 0; }
-    pre { background:#f6f8fa; padding:12px; border-radius:6px; overflow:auto; }
-    code { font-family: SFMono-Regular, Menlo, Monaco, "Courier New", monospace; }
-    ul { margin:8px 0 0 20px; }
-    footer { margin-top:28px; color:#666; font-size:0.9rem; }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>🧠 AI-Powered Social Media Post Analyzer</h1>
-    <p class="lead">Short README — AI/NLP tool for sentiment, engagement, keywords, and toxicity analysis.</p>
-  </header>
+🧠 AI-Powered Social Media Post Analyzer (Gemini)
 
-  <section>
-    <h2>🚀 Features</h2>
-    <ul>
-      <li>Sentiment analysis (positive / neutral / negative)</li>
-      <li>Engagement prediction</li>
-      <li>Keyword & hashtag suggestions</li>
-      <li>Toxicity / harmful content detection</li>
-      <li>Simple analytics dashboard</li>
-    </ul>
-  </section>
+A simple Flask web app that uses Google’s Gemini Generative AI to analyze social media posts. It returns a structured JSON with insights like sentiment, mood, and personality tone.
 
-  <section>
-    <h2>⚙️ Quick Setup</h2>
-    <pre><code># Clone
-git clone https://github.com/yourusername/ai-post-analyzer.git
-cd ai-post-analyzer
+🚀 Features
 
-# Virtual environment
-python -m venv venv
-source venv/bin/activate   # macOS / Linux
-venv\Scripts\activate      # Windows
+✨ Sentiment classification: Positive / Negative / Neutral
 
-# Install deps & run
+😊 Mood detection: short mood tag (e.g., Happy, Frustrated)
+
+🧠 Personality insight: tone or intent of the writer
+
+🌐 Simple Flask backend + easy-to-use REST API
+
+🔒 Secure local API key handling (apikey.txt or environment variable)
+
+⚙️ Setup & Run
+1️⃣ Install dependencies
 pip install -r requirements.txt
+
+2️⃣ Add your Gemini API key
+
+Create a file named apikey.txt in the project folder and paste your Gemini API key inside.
+(Never share or commit this file.)
+
+Alternatively, set the environment variable:
+
+export GEMINI_API_KEY='your_api_key_here'  # macOS/Linux
+setx GEMINI_API_KEY "your_api_key_here"    # Windows
+
+3️⃣ Run the app
 python app.py
-</code></pre>
-  </section>
 
-  <section>
-    <h2>🧩 Tech</h2>
-    <p>Python · NLP (Transformers / NLTK) · Streamlit / Flask · Charting (Plotly/Chart.js)</p>
-  </section>
 
-  <section>
-    <h2>📜 License</h2>
-    <p>MIT © 2025 Your Name</p>
-  </section>
+Then open: http://127.0.0.1:5000/
 
-  <footer>
-    <p>Edit this file to add screenshots, endpoint docs, or example input/output.</p>
-  </footer>
-</body>
-</html>
+📁 Project Structure
+AI-Powered Social Media Post Analyzer/
+│
+├── app.py                # Flask app using google-generativeai
+├── check_models.py       # Lists available Gemini models
+├── test_gemini.py        # Simple Gemini API connectivity test
+├── apikey.txt.template   # Template for local key storage
+├── requirements.txt      # Dependencies
+├── sample_posts.txt      # Example test posts
+└── templates/ and static/ (frontend files)
+
+🧩 Example Output
+{
+  "sentiment": "Positive",
+  "mood": "Excited",
+  "personality_insight": "Optimistic, confident tone"
+}
+
+🛠️ Technologies
+
+Backend: Flask, Flask-CORS
+
+AI Model: Google Gemini (Generative AI API)
+
+Language: Python 3.10+
+
+⚠️ Security Notice
+
+Never upload your apikey.txt or include real API keys in commits or public repositories.
+Revoke any accidentally exposed keys immediately from your Google AI console.
