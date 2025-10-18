@@ -1,8 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+
   <title>AI-Powered Social Media Post Analyzer (Gemini) - README</title>
   <style>
     body { font-family: "Segoe UI", Roboto, Arial, sans-serif; line-height:1.6; margin:40px; color:#222; }
@@ -86,11 +82,6 @@ setx GEMINI_API_KEY "your_api_key_here"</code></pre>
   <section>
     <h2>⚠️ Security Notice</h2>
     <p>Never upload <code>apikey.txt</code> or share real API keys publicly. Revoke any accidentally exposed keys immediately in your Google AI console.</p>
-  </section>
-
-  <section>
-    <h2>📜 License</h2>
-    <p>MIT License © 2025 Your Name</p>
   </section>
 
   <footer>
