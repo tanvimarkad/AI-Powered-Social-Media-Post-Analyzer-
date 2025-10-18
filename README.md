@@ -1,17 +1,4 @@
-
-  <title>AI-Powered Social Media Post Analyzer (Gemini) - README</title>
-  <style>
-    body { font-family: "Segoe UI", Roboto, Arial, sans-serif; line-height:1.6; margin:40px; color:#222; }
-    h1,h2,h3 { color:#0a66c2; }
-    pre { background:#f4f4f4; padding:10px; border-radius:6px; overflow:auto; }
-    code { font-family: Consolas, monospace; background:#eee; padding:2px 4px; border-radius:4px; }
-    ul { margin-left:20px; }
-    section { margin-bottom:24px; }
-    hr { border:none; border-top:1px solid #ddd; margin:24px 0; }
-    footer { margin-top:40px; font-size:0.9em; color:#666; }
-  </style>
-</head>
-<body>
+  
   <h1>🧠 AI-Powered Social Media Post Analyzer (Gemini)</h1>
   <p>A lightweight <strong>Flask web app</strong> using <strong>Google Gemini Generative AI</strong> to analyze social media posts and return structured JSON insights including sentiment, mood, and personality tone.</p>
 
