@@ -1,0 +1,114 @@
+/* Animated Gradient Background */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(270deg, #333, #000, #555, #111);
+  background-size: 800% 800%;
+  animation: gradientMove 15s ease infinite;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Centered container */
+.container {
+  background-color: rgba(255,255,255,0.05);
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+  max-width: 500px;
+  width: 90%;
+}
+
+h1 { margin-bottom: 10px; font-size: 2rem; }
+.tagline { margin-bottom: 20px; font-size: 1rem; }
+
+textarea {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  resize: none;
+}
+
+button {
+  background-color: #40739e;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover { background-color: #273c75; }
+
+#resultBox {
+  white-space: pre-wrap;
+  word-break: break-word;
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 10px;
+  text-align: left;
+}
+
+/* Floating Bot */
+.floating-bot {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  width: 120px;
+  height: 180px;
+  cursor: pointer;
+  z-index: 100;
+  animation: floatBot 3s ease-in-out infinite;
+}
+
+.bot-head {
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.bot-eye {
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+}
+
+.bot-eye.left { left: 15px; }
+.bot-eye.right { right: 15px; }
+
+.bot-body {
+  width: 80px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 20px;
+  margin: 0 auto;
+  margin-top: -10px;
+}
+
+@keyframes floatBot {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}

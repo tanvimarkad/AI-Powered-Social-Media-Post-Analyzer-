@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Media Analyzer 🤖</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>🤖 Social Media Post Analyzer</h1>
+    <p class="tagline">Analyze the emotion behind your posts instantly!</p>
+
+    <textarea id="postText" rows="6" placeholder="Type your social media post here..."></textarea>
+    <div class="button-row">
+      <button id="analyzeBtn">✨ Analyze</button>
+      <button id="exampleBtn">📋 Load Examples</button>
+    </div>
+
+    <div id="resultArea" style="display:none;">
+      <h2>🧠 Analysis Result</h2>
+      <div id="resultBox"></div>
+    </div>
+  </div>
+
+  <!-- Floating Bot -->
+  <div class="floating-bot">
+    <div class="bot-head">
+      <div class="bot-eye left"></div>
+      <div class="bot-eye right"></div>
+    </div>
+    <div class="bot-body"></div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

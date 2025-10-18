@@ -1,0 +1,10 @@
+flask
+google-generativeai
+#pip install flask-cors
+#python -m pip install flask-cors
+
+#pip show flask-cors
+#pip install google-generativeai
+#python -m pip install google-generativeai
+#pip show google-generativeai
+#python app.py
